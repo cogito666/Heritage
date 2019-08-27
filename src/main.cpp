@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <DFRobotDFPlayerMini.h>
 #include <SoftwareSerial.h>
+#include "Button_Press.h"
 
 // the number of the pushbutton pin
 const int button_pin_1 = 2;
@@ -11,18 +12,18 @@ const int button_pin_3 = 4;
 SoftwareSerial mySoftwareSerial(10, 11); // RX, TX
 DFRobotDFPlayerMini myDFPlayer;
 
-bool is_button_pressed(const int button_pin)
-{
-  bool is_pressed = digitalRead(button_pin);
+// bool is_button_pressed(const int button_pin)
+// {
+//   bool is_pressed = digitalRead(button_pin);
   
-  if (is_pressed == true)
-  {
-    delay(300);
-    return true;
-  }
-  else
-    return false;
-}
+//   if (is_pressed == true)
+//   {
+//     delay(300);
+//     return true;
+//   }
+//   else
+//     return false;
+// }
 
 void setup() {
   // debugging on serial monitor on PC screen
